@@ -1,0 +1,159 @@
+.anime-footer {
+  background: linear-gradient(135deg, #0b0f1a, #111a2e);
+  color: white;
+  padding: 40px 20px 20px;
+  margin-top: 60px;
+  border-top: 2px solid rgba(0, 200, 255, 0.3);
+  box-shadow: 0 -10px 30px rgba(0, 200, 255, 0.15);
+}
+
+/* MAIN GRID LAYOUT */
+.footer-content {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 30px;
+  align-items: start;
+}
+
+/* LEFT PANEL */
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* CENTER TEXT */
+.footer-center {
+  text-align: center;
+  padding: 0 10px;
+}
+
+/* RIGHT PANEL */
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-end;
+}
+
+
+/* QUOTE */
+.footer-quote {
+  font-size: 13px;
+  color: #cfcfcf;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+/* LINKS */
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  opacity: 0.8;
+  transition: 0.3s;
+}
+
+.footer-links a:hover {
+  color: #00d4ff;
+  opacity: 1;
+  transform: translateX(5px);
+}
+
+/* BOTTOM BAR */
+.footer-bottom {
+  text-align: center;
+  margin-top: 25px;
+  font-size: 12px;
+  opacity: 0.6;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 10px;
+}
+/* MAIN FOOTER TITLE */
+.footer-title {
+  font-size: 22px;
+  font-weight: bold;
+  color: #00bfff;
+  text-shadow: 0 0 8px rgba(0, 191, 255, 0.6);
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+/* ABOUT + CONTACT TITLES */
+.footer-box h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #00bfff;
+  margin-bottom: 12px;
+
+  /* anime glow effect */
+  text-shadow: 0 0 6px rgba(0, 191, 255, 0.4);
+  position: relative;
+}
+
+/* small underline animation under titles */
+.footer-box h3::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 2px;
+  background: #00bfff;
+  margin-top: 5px;
+  transition: 0.3s ease;
+}
+
+/* hover effect for extra polish */
+.footer-box:hover h3::after {
+  width: 70px;
+}
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 6px 0;
+  color: #ddd;
+}
+
+.contact-icon {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 6px rgba(168, 85, 247, 0.7));
+  transition: transform 0.2s ease;
+}
+
+.contact-icon:hover {
+  transform: scale(1.2);
+}
+
+.footer-subtitle {
+  color: #a855f7;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+.footer-premium-btn {
+  margin-top: 14px;
+}
+
+.footer-premium-btn button {
+  width: 100%;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 10px;
+  background: #00e5ff;
+  color: #000;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.footer-premium-btn button:hover {
+  opacity: 0.92;
+}

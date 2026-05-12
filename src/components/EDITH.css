@@ -1,0 +1,384 @@
+.edith-chat {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 320px;
+  background: #0b0f1a;
+  border: 1px solid #1f6fff;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 100, 255, 0.4);
+  overflow: hidden;
+  font-family: Arial;
+}
+
+.chat-box {
+  height: 300px;
+  overflow-y: auto;
+  padding: 10px;
+  color: white;
+}
+
+.user {
+  text-align: right;
+  color: #4da3ff;
+  margin: 5px 0;
+}
+
+.bot {
+  text-align: left;
+  color: #ffffff;
+  margin: 5px 0;
+}
+
+.chat-input {
+  display: flex;
+  border-top: 1px solid #222;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  background: #111;
+  color: white;
+}
+
+.chat-input button {
+  background: #1f6fff;
+  border: none;
+  color: white;
+  padding: 8px 12px;
+}
+/* FLOATING ORB */
+.edith-orb {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+/* PULSE EFFECT */
+.pulse-ring {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  border: 2px solid cyan;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+  opacity: 0.6;
+}
+
+/* CORE ORB */
+.core-orb {
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  background: radial-gradient(circle, #00ffff, #0066ff);
+  border-radius: 50%;
+  top: 12px;
+  left: 12px;
+  box-shadow: 0 0 20px cyan;
+}
+
+/* CHAT PANEL */
+.edith-container {
+  position: fixed;
+  bottom: 110px;
+  right: 25px;
+  width: 320px;
+  height: 420px;
+  background: rgba(0,0,0,0.85);
+  border: 1px solid rgba(0, 229, 255, 0.4);
+   box-shadow: 0 0 10px rgba(0, 229, 255, 0.25);
+  display: flex;
+  flex-direction: column;
+  z-index: 9998;
+}
+
+.edith-header {
+  padding: 10px;
+  color: cyan;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+}
+
+.close-btn {
+  cursor: pointer;
+}
+
+.edith-chatbox {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+  color: white;
+}
+
+.user {
+  text-align: right;
+  color: #00ffcc;
+  margin: 5px 0;
+}
+
+.bot {
+  text-align: left;
+  color: cyan;
+  margin: 5px 0;
+}
+
+/* INPUT CONTAINER */
+.edith-input {
+  display: flex;
+  align-items: center;
+  background: #1a1a1a;   
+  border-top: 1px solid #222;
+  padding: 6px;
+}
+
+/* TEXT INPUT */
+.edith-input input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  outline: none;
+  background: #121212;   
+  color: white;
+  border-radius: 6px;
+}
+
+/* SEND BUTTON BASE */
+.send-btn {
+  background: #000000;  
+  border: none;
+  padding: 10px 12px;
+  margin-left: 6px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: 0.25s ease;
+}
+
+/* ICON */
+.send-btn svg {
+  display: block;
+}
+
+/* HOVER EFFECT */
+.send-btn::before {
+  content: "";
+  position: absolute;
+  inset: 4px; 
+  border: 1px solid transparent;
+  border-radius: 6px;
+  transition: 0.25s ease;
+}
+
+/* ON HOVER */
+.send-btn:hover::before {
+  border: 1px solid white;
+}
+
+/*subtle lift */
+.send-btn:hover {
+  transform: translateY(-1px);
+}
+
+.edith-input input {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  outline: none;
+}
+
+
+
+/* ANIMATION */
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 0.6; }
+  50% { transform: scale(1.4); opacity: 0.2; }
+  100% { transform: scale(1); opacity: 0.6; }
+}
+/* ARC REACTOR BUTTON */
+.arc-reactor {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ROTATING ENERGY RINGS */
+.arc-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid rgba(0, 255, 255, 0.6);
+  animation: rotate 3s linear infinite;
+}
+
+.ring1 {
+  width: 80px;
+  height: 80px;
+}
+
+.ring2 {
+  width: 60px;
+  height: 60px;
+  animation-duration: 2s;
+}
+
+.ring3 {
+  width: 40px;
+  height: 40px;
+  animation-duration: 1.5s;
+}
+
+/* CORE ENERGY */
+.arc-core {
+  width: 18px;
+  height: 18px;
+  background: radial-gradient(circle, #ffffff, #00f7ff, #0066ff);
+  border-radius: 50%;
+  box-shadow: 0 0 20px #00f7ff;
+}
+
+/* ROTATION ANIMATION */
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.media-preview {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  max-width: 90%;
+}
+
+.media-preview img {
+  width: 80px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.media-info {
+  font-size: 12px;
+  color: #ccc;
+  overflow: hidden;
+}
+
+.media-info h4 {
+  margin: 0;
+  font-size: 14px;
+  color: #00c3ff;
+}
+.edith-chatbox {
+  height: 350px;
+  overflow-y: auto;
+  padding: 10px;
+  scroll-behavior: smooth;
+}
+.edith-chatbox {
+  height: 360px;
+  overflow-y: auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  scroll-behavior: smooth;
+}
+/* WRAPPER */
+.edith-wrapper {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 999;
+}
+
+/* LABEL */
+.edith-label {
+  margin-top: 6px;
+  font-size: 12px;
+  color: #00e5ff;
+  font-weight: bold;
+}
+
+/* TOOLTIP */
+.edith-tooltip {
+  position: absolute;
+  bottom: 80px;
+  background: rgba(0, 0, 0, 0.85);
+  color: white;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: 0.3s;
+  white-space: nowrap;
+}
+
+/* SHOW TOOLTIP ON HOVER */
+.edith-wrapper:hover .edith-tooltip {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* TITLE AREA */
+.edith-title-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* PREMIUM BUTTON */
+.premium-btn {
+  background: black;
+  color: #00e5ff;
+  border: 1px solid #00e5ff;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 11px;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+/* HOVER */
+.premium-btn:hover {
+  background: #00e5ff;
+  color: black;
+  box-shadow: 0 0 10px #00e5ff;
+}
+.premium-banner {
+  background-color: #ffd700;
+  /* Bright yellow */
+  color: #000;
+  padding: 3px 8px;
+  border-radius: 10px;
+  font-weight: bold;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.8);
+  margin: 10px;
+}
