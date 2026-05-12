@@ -33,7 +33,7 @@ function Home({
     };
 
     fetchMovies();
-  }, []);
+  }, [heroMovie, setHeroMovie]);
 
   return (
     <div>

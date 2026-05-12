@@ -2,7 +2,7 @@ import React from "react";
 import "./footer.css";
 import instagramIcon from "../assets/icons/instagram.png";
 import gmailIcon from "../assets/icons/gmail.png";
-import mediaOrbit from "../assets/icons/mediaorbit_icon.png";
+// import mediaOrbit from "../assets/icons/mediaorbit_icon.png";
 import PremiumButton from "./PremiumButton";
 
 function Footer() {

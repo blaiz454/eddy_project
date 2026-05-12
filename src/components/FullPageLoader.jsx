@@ -17,7 +17,7 @@ function FullPageLoader() {
     }, 2500);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [slides.length]);
 
   return (
     <div className="fullpage-loader">
