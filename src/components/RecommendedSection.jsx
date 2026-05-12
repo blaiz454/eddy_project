@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import HeroBanner from "./HeroBanner";
 import MovieRow from "./MovieRow";
 import MoreDetails from "./MoreDetails";
@@ -63,7 +63,8 @@ function Recommended() {
     localStorage.setItem("characterProfile", JSON.stringify(stored));
   };
 
-  const getCharacterBoost = (movie) => {
+  // FIXED ESLINT WARNING
+  const getCharacterBoost = useCallback((movie) => {
     const profile = JSON.parse(localStorage.getItem("characterProfile")) || {};
     const detected = detectCharacterType(movie);
 
@@ -76,7 +77,7 @@ function Recommended() {
     });
 
     return boost;
-  };
+  }, []);
 
   // GLOBAL DEDUPLICATION FUNCTION
   const dedupeMovies = (movies) => {
@@ -166,7 +167,7 @@ function Recommended() {
 
       setRows(allRows);
 
-      //  HERO
+      // HERO
       const allMovies = dedupeMovies([
         ...action,
         ...comedy,
@@ -182,9 +183,9 @@ function Recommended() {
     };
 
     fetchData();
-  }, []);
+  }, [getCharacterBoost]);
 
-  //USER INTERACTION
+  // USER INTERACTION
   const handleSelectMovie = (movie) => {
     setSelectedMovie(movie);
 
