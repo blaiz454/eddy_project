@@ -126,7 +126,7 @@ function Watchlist() {
                     <iframe
                       className="hover-trailer"
                       src={`https://www.youtube.com/embed/${trailerKey}?autoplay=1&mute=1&controls=0&loop=1&playlist=${trailerKey}`}
-                      allow="autoplay"
+                      allow="autoplay" title="watchlist-video"
                     />
                   </div>
                 )}
