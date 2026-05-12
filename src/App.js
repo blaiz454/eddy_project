@@ -20,12 +20,12 @@ import EDITHChat from "./components/EDITHChat";
 
 
 // MONETIZATION IMPORTS
-import PremiumStatus from "./components/PremiumStatus";
-import PremiumButton from "./components/PremiumButton";
-import WatchlistInsights from "./components/WatchlistInsights";
-import MpesaPayment from "./components/MpesaPayment";
-import { trackAdClick } from "./components/AdTracker";
-import { trackSponsoredClick } from "./components/SponsoredTracker";
+// import PremiumStatus from "./components/PremiumStatus";
+// import PremiumButton from "./components/PremiumButton";
+// import WatchlistInsights from "./components/WatchlistInsights";
+// import MpesaPayment from "./components/MpesaPayment";
+// import { trackAdClick } from "./components/AdTracker";
+// import { trackSponsoredClick } from "./components/SponsoredTracker";
 
 
 
